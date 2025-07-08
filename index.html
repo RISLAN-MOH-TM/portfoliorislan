@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rislan — Student Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- IMAGE SLIDER STYLES ---------- */
+    .slider {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      margin: 2rem auto;
+    }
+
+    .slider figure {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      animation: slide 25s infinite;
+    }
+
+    .slider figure img {
+      width: 20%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+      will-change: transform;
+    }
+
+    @keyframes slide {
+      0%, 18%   { transform: translateX(0%); }
+      20%, 38%  { transform: translateX(-20%); }
+      40%, 58%  { transform: translateX(-40%); }
+      60%, 78%  { transform: translateX(-60%); }
+      80%, 98%  { transform: translateX(-80%); }
+      100%      { transform: translateX(0%); }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========== HEADER =========== -->
+  <header>
+    <h1>Hi, I'm MOHAMED THAWFEEK RISLAN MOHAMED</h1>
+    <p>
+      BTEC HND in Computing & Software Engineering (Reading) |<br>
+      Aspiring Software Engineer | Networking & Cyber‑security Enthusiast |<br>
+      Ethical Hacker in Training | Future InfoSec Professional | CCNA‑Cisco®
+    </p>
+  </header>
+
+  <!-- =========== NAV =========== -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- =========== ABOUT =========== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      As a Higher National Diploma (HND) student in Computing at BCAS Campus, I am a
+      fast learner with a strong passion for technology and problem‑solving. I thrive on
+      tackling new challenges and continuously developing my technical and interpersonal
+      skills. I'm currently seeking an opportunity where I can contribute to building
+      innovative software solutions, apply my knowledge in real‑world environments, and
+      grow as part of a dynamic and forward‑thinking team. Let’s connect and explore how
+      I can bring value to your organization!
+    </p>
+  </section>
+
+  <!-- =========== EDUCATION =========== -->
+  <section id="education">
+    <h2>Educational Qualifications</h2>
+    <ul class="timeline">
+      <li>
+        <h3>BTEC HND in Computing (Reading)</h3>
+        <span>2024 – Present | BCAS Campus, Colombo</span>
+        <p>Specialising in Software Engineering, Networking and Cyber‑security.</p>
+      </li>
+      <li>
+        <h3>CCNA — Cisco Certified Network Associate (R)</h3>
+        <span>2025 - Present</span>
+      </li>
+      <li>
+        <h3>G.C.E. Advanced Level — Biological Science Stream</h3>
+        <span>2020 | Centrel College</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- =========== PROJECTS =========== -->
+  <section id="projects">
+    <h2>Projects &amp; Assignments</h2>
+
+    <h3>Major Projects</h3>
+    <ul>
+      <li><strong>Portfolio Website</strong> — Responsive personal portfolio built with vanilla HTML, CSS &amp; JS.</li>
+      <li><strong>Online Quiz App</strong> — SPA quiz application with time‑tracking and leader‑board (JavaScript, Firebase).</li>
+      <li><strong>Library Management System</strong> — Desktop app in Java (JavaFX, MySQL).</li>
+    </ul>
+
+    <h3>Selected Academic Assignments</h3>
+    <ul>
+      <li>Network topology simulation using Cisco Packet Tracer.</li>
+      <li>Ethical‑hacking lab report on OWASP Top‑10 vulnerabilities.</li>
+      <li>Micro‑service REST API (Spring Boot) for student enrolment.</li>
+    </ul>
+  </section>
+
+  <!-- =========== GALLERY WITH ENHANCED SLIDER =========== -->
+  <section id="gallery">
+    <h2>Project Screenshots</h2>
+
+    <div class="slider">
+      <figure>
+        <img src="images/img1.jpg" alt="Slide 1" />
+        <img src="images/img2.jpg" alt="Slide 2" />
+        <img src="images/img3.jpg" alt="Slide 3" />
+        <img src="images/img4.jpg" alt="Slide 4" />
+        <img src="images/img5.jpg" alt="Slide 5" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT =========== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-details">
+      <p><strong>Phone:</strong> +94 75 464 2013</p>
+      <p><strong>Email:</strong> <a href="mailto:rislanmohamed151@gmail.com">rislanmohamed151@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rislan-mohamed" target="_blank">linkedin.com/in/rislan-mohamed</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/rislan" target="_blank">github.com/rislan</a></p>
+    </div>
+
+    <form onsubmit="return validateForm()">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="form-email" name="email" placeholder="you@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message"></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer>
+    <p>&copy; 2025 RISLAN's Portfolio</p>
+  </footer>
+
+  <!-- =========== BASIC JS (form validation only) =========== -->
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("form-email").value.trim();
+      const msg = document.getElementById("message").value.trim();
+
+      if (!name || !email || !msg) {
+        alert("Please fill in all fields before sending 🙂");
+        return false;
+      }
+      alert("Thanks for reaching out, " + name + "!");
+      return true;
+    }
+  </script>
+</body>
+</html>

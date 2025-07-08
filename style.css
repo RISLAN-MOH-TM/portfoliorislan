@@ -1,0 +1,168 @@
+/* ---------- Global Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Base Styles ---------- */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    color: #0077b6;
+    margin-bottom: 1rem;
+}
+h3 {
+    margin: 0.75rem 0 0.25rem;
+}
+
+/* ---------- Layout Sections ---------- */
+header {
+    background: #0077b6;
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+nav {
+    background: #023e8a;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 0.75rem 1.25rem;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #90e0ef;
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    background: #023e8a;
+    color: #ffffff;
+    padding: 1.5rem 0;
+}
+
+/* ---------- Timeline (Education) ---------- */
+.timeline {
+    list-style: none;
+    border-left: 3px solid #0077b6;
+    padding-left: 1rem;
+}
+.timeline li {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: #0077b6;
+    border-radius: 50%;
+}
+
+/* ---------- Image Slider ---------- */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.slide-track {
+    display: flex;
+    width: calc(100% * 5); /* 5 slides */
+    animation: scroll 25s linear infinite;
+}
+.slide {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;           
+}
+.slide img {
+    width: 500%;
+    height:500px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+}
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(0); }
+    25%  { transform: translateX(-100%); }
+    45%  { transform: translateX(-100%); }
+    50%  { transform: translateX(-200%); }
+    70%  { transform: translateX(-200%); }
+    75%  { transform: translateX(-300%); }
+    95%  { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+}
+
+/* ---------- Contact Section ---------- */
+.contact-details {
+    background: #e0fbfc;
+    border: 1px solid #0077b6;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+}
+.contact-details p {
+    margin: 0.3rem 0;
+}
+.contact-details a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+form input[type="submit"] {
+    background: #0077b6;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+form input[type="submit"]:hover {
+    background: #005f8e;
+}
